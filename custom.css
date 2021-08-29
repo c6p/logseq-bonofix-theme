@@ -1,5 +1,13 @@
 @charset "UTF-8";
-@import url("https://cdn.jsdelivr.net/npm/@ibm/plex@4.0.2/css/ibm-plex.min.css?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code");
+@import url("https://cdn.jsdelivr.net/gh/adobe-fonts/source-sans@3.046R/source-sans-3VF.css");
+@font-face {
+  font-family: "Source Han Sans VF";
+  font-weight: 200 900;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("https://cdn.jsdelivr.net/gh/adobe-fonts/source-han-sans@release/Variable/WOFF2/OTF/Subset/SourceHanSansCN-VF.otf.woff2");
+}
 /* ****************************
 ************** Root ***********
 *******************************/
@@ -891,5 +899,23 @@ svg.add-button > .circle {
 }
 
 :root {
-  --ls-font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --ct-text-size: 16px;
+  --ct-line-height: 1.6;
+  --ls-font-family: "Only Emoji", "Source Sans 3 VF", "Source Han Sans VF",
+    sans-serif;
+  --ct-page-title-font-family: var(--ls-font-family);
+  --ct-code-font-family: "Fira Code", monospace;
+}
+
+html,
+body {
+  font-size: var(--ct-text-size);
+  font-family: var(--ls-font-family);
+  overscroll-behavior-y: none;
+  -webkit-font-smoothing: auto;
+  line-height: var(--ct-line-height);
+}
+
+textarea {
+  line-height: var(--ct-line-height);
 }
